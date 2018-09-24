@@ -1,9 +1,9 @@
 FROM golang
 
-ADD . /go/src/github.com/lwander/k8s-demo
+ADD . /go/src/hello
 
-RUN go install github.com/lwander/k8s-demo
+RUN go install /hello
 
 ADD ./content /content
 
-ENTRYPOINT /go/bin/k8s-demo
+ENTRYPOINT /go/bin/hello
